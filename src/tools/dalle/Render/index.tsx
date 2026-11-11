@@ -1,5 +1,5 @@
 import { BuiltinRenderProps } from '@lobechat/types';
-import { ActionIcon, PreviewGroup } from '@lobehub/ui';
+import { ActionIcon, PreviewGroup, type PreviewGroupProps } from '@lobehub/ui';
 import { Download } from 'lucide-react';
 import { memo, useRef } from 'react';
 import { Flexbox } from 'react-layout-kit';
@@ -41,7 +41,7 @@ const DallE = memo<BuiltinRenderProps<DallEImageItem[]>>(({ content, messageId }
             currentRef.current = current;
           },
           toolbarAddon: <ActionIcon color={'#fff'} icon={Download} onClick={handleDownload} />,
-        }}
+        } as PreviewGroupProps['preview']}
       >
         <GalleyGrid items={content.map((c) => ({ ...c, messageId }))} renderItem={ImageItem} />
       </PreviewGroup>
