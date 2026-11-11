@@ -15,6 +15,7 @@ import { Locales } from '@/locales/resources';
 import { DynamicLayoutProps } from '@/types/next';
 import { RouteVariants } from '@/utils/server/routeVariants';
 
+export const dynamic = 'force-dynamic';
 const inVercel = process.env.VERCEL === '1';
 
 interface RootLayoutProps extends DynamicLayoutProps {
