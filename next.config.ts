@@ -28,6 +28,7 @@ const nextConfig: NextConfig = {
     emotion: true,
   },
   compress: isProd,
+  staticPageGenerationTimeout: 180,
   eslint: {
     ignoreDuringBuilds: true,
   },
